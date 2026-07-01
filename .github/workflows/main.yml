@@ -21,3 +21,4 @@ jobs:
         env:
           STRIP_IP: ${{ secrets.STRIP_IP }}
           CITY:     ${{ secrets.CITY }}
+          PROD:     ${{ secrets.PROD }}
