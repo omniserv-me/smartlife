@@ -1,3 +1,5 @@
+### This repo is DEPRECATED, see omniserv for current development
+
 # Smartlife
 This project's goal is to automatisate my smarthome appliances.
 
