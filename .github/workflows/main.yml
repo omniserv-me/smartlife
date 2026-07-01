@@ -1,0 +1,23 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: "Clean workspace"
+        run: sudo rm -rf $GITHUB_WORKSPACE/*
+
+      - name: "Code checkout"
+        uses: actions/checkout@v7.0.0
+
+      - name: "Run containers"
+        run: docker compose up -d --build
+        env:
+          STRIP_IP: ${{ secrets.STRIP_IP }}
+          CITY:     ${{ secrets.CITY }}

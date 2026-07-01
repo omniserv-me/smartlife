@@ -47,6 +47,6 @@ async def runApi():
         servicer=StatusUpdateServicer(),
         server=rpc_server
     )
-    rpc_server.add_insecure_port(f"localhost:{RPC_PORT}")
+    rpc_server.add_insecure_port(f"0.0.0.0:{RPC_PORT}")
     rpc_server.start()
     print(f"RPC server listening on port :{RPC_PORT}")
