@@ -7,6 +7,7 @@ fmt = Formatter(
 )
 
 base_handler = FileHandler(
+    # ToDo: logs disappear inside the container
     filename='.log',
     mode='a',
     encoding='utf-8',
